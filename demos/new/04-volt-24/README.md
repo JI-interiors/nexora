@@ -1,0 +1,1 @@
+VOLT/24 electrical demo. Replace demo contact details and image licensing before production.

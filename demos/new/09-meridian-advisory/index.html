@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MERIDIAN — Business Advisory</title>
+<meta name="description" content="Meridian is a strategic business advisory for founders navigating growth, capital and change.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--ink:#111314;--paper:#e8e5dc;--acid:#d9ff45;--orange:#ff6845;--muted:#777b78;--line:rgba(17,19,20,.2)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif}a{color:inherit;text-decoration:none}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:radial-gradient(#111 1px,transparent 1px);background-size:5px 5px;z-index:20}
+.nav{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4vw;position:relative;z-index:3}.brand{font-weight:800;letter-spacing:-.04em;font-size:22px}.brand span{font-weight:400}.navlinks{display:flex;gap:26px;font-size:12px}.navlinks a:hover{opacity:.55}.navcta{background:var(--ink);color:white;padding:12px 17px;font-size:11px;font-weight:800;letter-spacing:.08em}
+.hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:1.15fr .85fr;border-bottom:1px solid var(--line)}
+.hero-main{padding:7vw 4vw 5vw;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line)}
+.kicker{font:11px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(64px,10vw,155px);line-height:.82;letter-spacing:-.085em;margin:0;font-weight:700;max-width:1000px}.hero h1 i{font-weight:400}.hero-bottom{display:flex;justify-content:space-between;gap:40px;align-items:end}.hero-bottom p{max-width:450px;line-height:1.7;font-size:15px;margin:0}.index{font:12px "DM Mono";color:var(--muted)}
+.hero-side{background:var(--ink);color:white;display:flex;flex-direction:column;justify-content:space-between;padding:4vw}.orbit{width:min(32vw,400px);height:min(32vw,400px);border:1px solid #4a4e4d;border-radius:50%;margin:auto;position:relative}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #4a4e4d;border-radius:50%;inset:14%;}.orbit:after{inset:38%}.dot{position:absolute;width:18px;height:18px;background:var(--acid);border-radius:50%;top:8%;right:19%;box-shadow:0 0 0 12px rgba(217,255,69,.08)}.orbit-label{position:absolute;bottom:8%;left:9%;font:11px "DM Mono";color:#9fa5a2}.sidecopy{font-size:13px;line-height:1.6;color:#bfc3c1;max-width:320px}.sidecopy strong{color:white}
+.ticker{background:var(--acid);overflow:hidden;white-space:nowrap;padding:13px 0;border-bottom:1px solid var(--line)}.ticker div{font:11px "DM Mono";letter-spacing:.12em;animation:ticker 22s linear infinite;display:inline-block}@keyframes ticker{to{transform:translateX(-50%)}}
+.manifesto{display:grid;grid-template-columns:.7fr 1.3fr;border-bottom:1px solid var(--line)}.manifesto .left{padding:7vw 4vw;border-right:1px solid var(--line)}.manifesto .right{padding:7vw 6vw}.manifesto h2{font-size:clamp(42px,6vw,86px);line-height:.92;letter-spacing:-.07em;margin:0;font-weight:600}.manifesto p{font-size:20px;line-height:1.55;max-width:780px;margin:0}.manifesto p b{background:var(--acid);font-weight:500}
+.strategy{padding:7vw 4vw;border-bottom:1px solid var(--line)}.sectiontop{display:flex;justify-content:space-between;align-items:end;margin-bottom:55px}.sectiontop h2{font-size:55px;letter-spacing:-.06em;margin:0}.mono{font:11px "DM Mono";color:var(--muted)}
+.moves{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}.move{min-height:370px;padding:28px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}.move:last-child{border-right:0}.num{font:12px "DM Mono";color:var(--muted)}.move h3{font-size:38px;letter-spacing:-.06em;line-height:.95;margin:0 0 15px}.move p{font-size:13px;line-height:1.65;color:#5f6361;margin:0}.move:nth-child(2){background:var(--orange)}.move:nth-child(2) .num,.move:nth-child(2) p{color:#3e2019}
+.signal{display:grid;grid-template-columns:1fr 1fr;background:#d6d1c5;border-bottom:1px solid var(--line)}.signal-img{min-height:650px;background:url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85") center/cover;filter:grayscale(100%)}.signal-copy{padding:7vw 6vw}.signal-copy h2{font-size:70px;line-height:.9;letter-spacing:-.075em;margin:0 0 35px}.signal-copy p{max-width:470px;line-height:1.75;font-size:15px}.signal-list{margin-top:45px;border-top:1px solid var(--line)}.signal-list div{display:grid;grid-template-columns:50px 1fr;gap:15px;padding:20px 0;border-bottom:1px solid var(--line);font-size:13px}.signal-list b{font:11px "DM Mono";color:var(--muted)}
+.cases{padding:7vw 4vw;border-bottom:1px solid var(--line)}.case{display:grid;grid-template-columns:100px 1fr 280px;gap:30px;padding:27px 0;border-top:1px solid var(--line);align-items:center}.case:last-child{border-bottom:1px solid var(--line)}.case .no{font:11px "DM Mono"}.case h3{font-size:29px;letter-spacing:-.04em;margin:0}.case p{font-size:12px;line-height:1.5;color:var(--muted);margin:5px 0 0}.case .result{text-align:right;font:11px "DM Mono";color:#59605c}
+.approach{padding:7vw 4vw;background:var(--ink);color:white}.approach-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:8vw}.approach h2{font-size:75px;line-height:.88;letter-spacing:-.075em;margin:0}.steps{border-top:1px solid #444}.step{display:grid;grid-template-columns:80px 1fr;padding:25px 0;border-bottom:1px solid #444}.step b{font:11px "DM Mono";color:#a4aaa7}.step h3{margin:0 0 8px;font-size:23px}.step p{margin:0;color:#9ca29f;line-height:1.6;font-size:13px}
+.contact{background:var(--acid);padding:7vw 4vw;display:grid;grid-template-columns:1fr 1fr;gap:8vw}.contact h2{font-size:clamp(60px,8vw,120px);line-height:.8;letter-spacing:-.09em;margin:0}.contact p{font-size:15px;line-height:1.7;max-width:430px}.contact a{display:inline-block;background:var(--ink);color:white;padding:18px 24px;margin-top:20px;font-size:12px;font-weight:800}
+footer{background:var(--ink);color:white;padding:35px 4vw;display:flex;justify-content:space-between;font:11px "DM Mono";color:#929895}.footbrand{color:white;font:700 18px Manrope}
+.mobilebar{display:none}
+@media(max-width:800px){
+.nav{height:64px;padding:0 20px}.navlinks{display:none}.navcta{padding:10px 12px}.hero{display:block;min-height:auto}.hero-main{min-height:650px;padding:50px 20px 35px;border-right:0}.hero h1{font-size:70px;margin-top:80px}.hero-bottom{display:block}.hero-bottom p{font-size:14px;margin-top:30px}.hero-side{min-height:390px;padding:30px 20px}.orbit{width:260px;height:260px}.ticker{padding:11px 0}
+.manifesto{display:block}.manifesto .left{padding:65px 20px;border-right:0}.manifesto .right{padding:10px 20px 70px}.manifesto p{font-size:17px}.strategy,.cases,.approach{padding:70px 20px}.sectiontop{display:block;margin-bottom:35px}.sectiontop h2{font-size:48px;margin-bottom:12px}.moves{display:block}.move{min-height:310px;border-right:0;border-bottom:1px solid var(--line)}.signal{display:block}.signal-img{min-height:420px}.signal-copy{padding:70px 20px}.signal-copy h2{font-size:58px}.case{grid-template-columns:45px 1fr;gap:12px}.case .result{grid-column:2;text-align:left}.approach-grid{display:block}.approach h2{font-size:60px;margin-bottom:50px}.step{grid-template-columns:55px 1fr}.contact{display:block;padding:70px 20px 100px}.contact h2{font-size:70px}.contact p{margin-top:40px}footer{padding:35px 20px 80px;display:block}.footerlinks{margin-top:20px}.mobilebar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:white;padding:8px;gap:7px}.mobilebar a{flex:1;text-align:center;padding:12px 3px;background:var(--ink);color:white;font:10px "DM Mono"}.mobilebar a:last-child{background:var(--orange);color:var(--ink)}
+}
+</style>
+  <meta name="robots" content="noindex, nofollow, noarchive">
+
+<style id="nexora-home-return">
+.nexora-home-return{position:fixed;left:18px;top:18px;z-index:2147483647;display:inline-flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(10,10,14,.82);color:#fff;text-decoration:none;font:700 12px/1 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:.04em;backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,.22);transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.nexora-home-return:hover{transform:translateY(-2px);background:#ff5a1f;color:#111;border-color:#ff5a1f}
+.nexora-home-return span{font-size:16px;line-height:0}
+@media(max-width:640px){.nexora-home-return{left:10px;top:10px;padding:9px 11px;font-size:11px}}
+</style>
+</head>
+<body>
+<a class="nexora-home-return" href="../../../index.html" aria-label="Back to NEXORA home"><span>←</span> NEXORA</a>
+
+<nav class="nav"><a class="brand" href="#">MERIDIAN<span>/ADVISORY</span></a><div class="navlinks"><a href="#strategy">Strategy</a><a href="#cases">Cases</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div><a class="navcta" href="#contact">START A CONVERSATION</a></nav>
+
+<header class="hero">
+<section class="hero-main"><div class="kicker">Independent business advisory · 01/09</div><h1>Make the<br><i>next move.</i></h1><div class="hero-bottom"><p>Meridian works with founders and leadership teams when the obvious answer isn't good enough — growth, capital, repositioning and the decisions between them.</p><span class="index">LONDON · NEW YORK · SINGAPORE</span></div></section>
+<aside class="hero-side"><div class="kicker">Decision architecture</div><div class="orbit"><span class="dot"></span><span class="orbit-label">WHERE ARE YOU GOING?</span></div><div class="sidecopy"><strong>Clarity before action.</strong><br>We turn complicated business situations into a small number of decisions that can actually move the company forward.</div></aside>
+</header>
+
+<div class="ticker"><div>GROWTH / CAPITAL / POSITIONING / OPERATING MODEL / EXIT / TURNAROUND / GROWTH / CAPITAL / POSITIONING / OPERATING MODEL / EXIT / TURNAROUND / </div></div>
+
+<section class="manifesto"><div class="left"><div class="kicker">The premise</div><h2>Less advice.<br>More <span style="color:var(--orange)">movement.</span></h2></div><div class="right"><p>Most advisory work ends with a deck. Ours starts there. <b>We stay close to the decisions, the people and the execution</b> until the business has moved into a stronger position.</p></div></section>
+
+<section class="strategy" id="strategy"><div class="sectiontop"><div><div class="kicker">What we solve</div><h2>Three moves.</h2></div><div class="mono">NOT A MENU OF SERVICES</div></div>
+<div class="moves">
+<article class="move"><div class="num">01 / FIND THE EDGE</div><div><h3>Position</h3><p>Define where the company can win, why customers should care and what the market is missing.</p></div></article>
+<article class="move"><div class="num">02 / FUND THE MOVE</div><div><h3>Capital</h3><p>Prepare the story, economics and operating logic for fundraising, acquisition or a strategic reset.</p></div></article>
+<article class="move"><div class="num">03 / MAKE IT REAL</div><div><h3>Scale</h3><p>Turn strategic intent into an operating model with priorities, owners, measures and momentum.</p></div></article>
+</div></section>
+
+<section class="signal"><div class="signal-img"></div><div class="signal-copy"><div class="kicker">The signal</div><h2>Know what<br>matters now.</h2><p>When everything looks important, progress slows. We build a clear hierarchy of decisions so leadership teams know what to do now, what to defer and what to stop.</p><div class="signal-list"><div><b>01</b><span>Market and competitive signal</span></div><div><b>02</b><span>Economics and growth constraints</span></div><div><b>03</b><span>Leadership and operating friction</span></div><div><b>04</b><span>Capital and strategic options</span></div></div></div></section>
+
+<section class="cases" id="cases"><div class="sectiontop"><div><div class="kicker">Selected work</div><h2>Proof, not promises.</h2></div><div class="mono">ANONYMIZED CASE INDEX</div></div>
+<div class="case"><div class="no">A01</div><div><h3>Repositioned a regional logistics group</h3><p>Strategy · commercial model · leadership alignment</p></div><div class="result">+31% qualified pipeline</div></div>
+<div class="case"><div class="no">A02</div><div><h3>Prepared a founder-led SaaS company for Series B</h3><p>Growth narrative · metrics · investor architecture</p></div><div class="result">$42M capital raised</div></div>
+<div class="case"><div class="no">A03</div><div><h3>Reset the operating model of a retail platform</h3><p>Organisation · unit economics · execution rhythm</p></div><div class="result">-18% operating cost</div></div>
+<div class="case"><div class="no">A04</div><div><h3>Built the market-entry plan for a global manufacturer</h3><p>Market selection · partnerships · launch plan</p></div><div class="result">3 new markets</div></div>
+</section>
+
+<section class="approach" id="approach"><div class="approach-grid"><h2>How we<br>work.</h2><div class="steps">
+<div class="step"><b>01</b><div><h3>Diagnose</h3><p>We get close to the facts, the economics and the people before prescribing anything.</p></div></div>
+<div class="step"><b>02</b><div><h3>Frame</h3><p>We reduce the situation to the few decisions that genuinely change the outcome.</p></div></div>
+<div class="step"><b>03</b><div><h3>Decide</h3><p>Leadership gets a clear set of choices, trade-offs and a recommended direction.</p></div></div>
+<div class="step"><b>04</b><div><h3>Move</h3><p>We work alongside the team through the first critical moves, not from the sidelines.</p></div></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div><div class="kicker">01 / Start here</div><h2>Let's<br>talk.</h2></div><div><p>Tell us what is changing in the business, what decision is in front of you and what happens if you get it wrong. We'll tell you if we can help.</p><a href="mailto:hello@meridian-advisory.example">SEND AN ENQUIRY →</a></div></section>
+
+<footer><div class="footbrand">MERIDIAN/ADVISORY</div><div>STRATEGY · CAPITAL · GROWTH · 2026</div></footer>
+<div class="mobilebar"><a href="#strategy">STRATEGY</a><a href="#cases">CASES</a><a href="#contact">CONTACT</a></div>
+</body></html>

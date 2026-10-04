@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CASA VIVA — Coastal Hotel & Retreat</title>
+<meta name="description" content="Casa Viva is a sun-soaked coastal retreat designed around slow mornings, ocean air and unforgettable stays.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+:root{--ink:#17252b;--sand:#f4eadb;--coral:#e9674d;--sun:#f5b64b;--sea:#267f7b;--cream:#fffaf2;--line:rgba(23,37,43,.16)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{text-decoration:none;color:inherit}.nav{position:absolute;z-index:5;top:0;left:0;width:100%;display:flex;align-items:center;justify-content:space-between;padding:25px 5vw;color:white}
+.logo{font-size:21px;font-weight:700;letter-spacing:.12em}.logo span{font-weight:400}
+.navlinks{display:flex;gap:28px;font-size:13px}.navlinks a{opacity:.9}.book{border:1px solid rgba(255,255,255,.6);padding:12px 19px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.hero{min-height:92vh;position:relative;overflow:hidden;background:#15353a;color:white;display:grid;align-items:end}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,25,29,.28),rgba(7,25,29,.06) 45%,rgba(7,25,29,.78)),url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=2200&q=88") center/cover}
+.hero-content{position:relative;z-index:2;padding:0 5vw 7vw;max-width:930px}.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px;color:#ffe0a4}.hero h1{font-family:"Playfair Display",serif;font-size:clamp(62px,10vw,145px);line-height:.82;font-weight:500;margin:0 0 30px;letter-spacing:-.055em}.hero h1 em{font-weight:500}.hero-copy{max-width:480px;font-size:17px;line-height:1.65;color:rgba(255,255,255,.86)}
+.hero-meta{display:flex;gap:9px;margin-top:30px;flex-wrap:wrap}.pill{background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.22);padding:12px 16px;border-radius:3px;font-size:12px}
+.marquee{overflow:hidden;background:var(--coral);color:white;padding:15px 0;white-space:nowrap}.marquee div{display:inline-block;animation:move 24s linear infinite;font-size:13px;letter-spacing:.14em;text-transform:uppercase}@keyframes move{to{transform:translateX(-50%)}}
+.intro{padding:110px 5vw 120px;display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;align-items:start;background:var(--sand)}
+.intro h2{font-family:"Playfair Display",serif;font-size:clamp(42px,6vw,82px);line-height:.98;font-weight:500;margin:0;letter-spacing:-.04em}.intro h2 em{color:var(--coral)}
+.intro p{font-size:17px;line-height:1.8;max-width:510px;margin:10px 0 35px}.textlink{display:inline-flex;gap:12px;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:8px;font-weight:700;font-size:13px}
+.stay{padding:120px 5vw;background:var(--cream)}.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}.sectionhead h2{font-family:"Playfair Display";font-size:62px;font-weight:500;line-height:1;margin:0}.sectionhead p{max-width:310px;line-height:1.6;font-size:14px}
+.rooms{display:grid;grid-template-columns:1.45fr .8fr .8fr;gap:18px}.room{position:relative;min-height:560px;overflow:hidden;color:white}.room:nth-child(2),.room:nth-child(3){min-height:420px;margin-top:90px}.room img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .6s}.room:hover img{transform:scale(1.05)}.room:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 42%,rgba(10,23,27,.78))}.room-info{position:absolute;z-index:2;bottom:25px;left:25px;right:25px}.room-info small{font-size:10px;letter-spacing:.15em;text-transform:uppercase}.room-info h3{font-family:"Playfair Display";font-size:32px;margin:8px 0}.room-info span{font-size:12px}
+.experience{display:grid;grid-template-columns:1fr 1fr;background:var(--sea);color:white}.exp-img{min-height:720px;background:url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=85") center/cover}.exp-copy{padding:100px 9vw;display:flex;flex-direction:column;justify-content:center}.exp-copy .eyebrow{color:#f7c36b}.exp-copy h2{font-family:"Playfair Display";font-size:clamp(48px,6vw,82px);font-weight:500;line-height:.98;margin:0 0 28px}.exp-copy p{line-height:1.8;color:rgba(255,255,255,.78);max-width:480px}.experience-list{margin-top:30px;border-top:1px solid rgba(255,255,255,.3)}.experience-list div{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.3);display:flex;justify-content:space-between;font-size:13px}
+.day{padding:120px 5vw;background:#f8f0e5}.daygrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:10vw}.day h2{font-family:"Playfair Display";font-size:68px;font-weight:500;line-height:.95;margin:0}.timeline{border-top:1px solid var(--line)}.time{display:grid;grid-template-columns:90px 1fr;gap:25px;padding:25px 0;border-bottom:1px solid var(--line)}.time b{font-size:12px;letter-spacing:.1em}.time h3{margin:0 0 7px;font-family:"Playfair Display";font-size:25px;font-weight:500}.time p{margin:0;line-height:1.6;font-size:13px;color:#526066}
+.gallery{padding:120px 5vw}.gallery-grid{display:grid;grid-template-columns:1.2fr .7fr .7fr;gap:14px;height:650px}.gallery-grid div{background-position:center;background-size:cover}.g1{background-image:url("https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1300&q=85")}.g2{background-image:url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85")}.g3{background-image:url("https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=900&q=85")}
+.reserve{background:var(--sun);padding:100px 5vw;display:grid;grid-template-columns:1fr 1fr;gap:8vw}.reserve h2{font-family:"Playfair Display";font-size:76px;line-height:.9;font-weight:500;margin:0}.form{display:grid;grid-template-columns:1fr 1fr;gap:13px}.form input,.form select{width:100%;border:0;border-bottom:1px solid rgba(23,37,43,.45);background:transparent;padding:18px 4px;font:inherit;outline:none}.form button{grid-column:1/-1;background:var(--ink);color:white;border:0;padding:19px;font-weight:700;cursor:pointer;margin-top:15px}
+footer{background:var(--ink);color:white;padding:55px 5vw 30px;display:flex;justify-content:space-between;align-items:end}.footlogo{font-size:26px;letter-spacing:.12em}.footerlinks{display:flex;gap:24px;font-size:12px;color:#bdc8ca}
+.mobilebar{display:none}
+@media(max-width:800px){
+.nav{padding:19px 20px}.navlinks{display:none}.book{padding:10px 13px}.hero{min-height:88vh}.hero-content{padding:0 20px 95px}.hero h1{font-size:65px}.hero-copy{font-size:15px}.marquee{padding:12px 0}
+.intro,.day,.reserve{display:block;padding:75px 20px}.intro h2,.day h2{font-size:52px}.intro p{font-size:15px;margin-top:30px}
+.stay{padding:75px 20px}.sectionhead{display:block}.sectionhead h2{font-size:50px}.sectionhead p{margin-top:20px}.rooms{display:block}.room,.room:nth-child(2),.room:nth-child(3){min-height:470px;margin:0 0 14px}
+.experience{display:block}.exp-img{min-height:430px}.exp-copy{padding:70px 25px}.exp-copy h2{font-size:55px}
+.daygrid{display:block}.timeline{margin-top:45px}.gallery{padding:75px 20px}.gallery-grid{height:550px;grid-template-columns:1fr 1fr;grid-template-rows:1.4fr 1fr}.g1{grid-row:1/3}.reserve h2{font-size:58px;margin-bottom:40px}.form{grid-template-columns:1fr}.form button{grid-column:auto}
+footer{display:block;padding:45px 20px 90px}.footerlinks{margin-top:25px;flex-wrap:wrap}.mobilebar{display:flex;position:fixed;z-index:20;bottom:0;left:0;right:0;background:var(--ink);color:white;padding:10px;gap:8px}.mobilebar a{flex:1;text-align:center;padding:13px 5px;font-size:11px;font-weight:700;border:1px solid #435257}.mobilebar a:last-child{background:var(--coral);border-color:var(--coral)}
+}
+</style>
+  <meta name="robots" content="noindex, nofollow, noarchive">
+
+<style id="nexora-home-return">
+.nexora-home-return{position:fixed;left:18px;top:18px;z-index:2147483647;display:inline-flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(10,10,14,.82);color:#fff;text-decoration:none;font:700 12px/1 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:.04em;backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,.22);transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.nexora-home-return:hover{transform:translateY(-2px);background:#ff5a1f;color:#111;border-color:#ff5a1f}
+.nexora-home-return span{font-size:16px;line-height:0}
+@media(max-width:640px){.nexora-home-return{left:10px;top:10px;padding:9px 11px;font-size:11px}}
+</style>
+</head>
+<body>
+<a class="nexora-home-return" href="../../../index.html" aria-label="Back to NEXORA home"><span>←</span> NEXORA</a>
+
+<nav class="nav"><a class="logo" href="#">CASA <span>VIVA</span></a><div class="navlinks"><a href="#stay">Stay</a><a href="#experiences">Experiences</a><a href="#day">Your Day</a><a href="#contact">Contact</a></div><a class="book" href="#contact">BOOK A STAY</a></nav>
+
+<header class="hero">
+<div class="hero-content"><div class="eyebrow">Mediterranean coast · Since 1987</div><h1>Stay<br><em>sunward.</em></h1><p class="hero-copy">A small coastal hotel for long lunches, barefoot afternoons and mornings that begin with the sea.</p><div class="hero-meta"><span class="pill">18 rooms</span><span class="pill">Private beach</span><span class="pill">Slow breakfast</span></div></div>
+</header>
+<div class="marquee"><div>CASA VIVA &nbsp; • &nbsp; SEA AIR &nbsp; • &nbsp; LONG LUNCHES &nbsp; • &nbsp; SLOW MORNINGS &nbsp; • &nbsp; CASA VIVA &nbsp; • &nbsp; SEA AIR &nbsp; • &nbsp; LONG LUNCHES &nbsp; • &nbsp; SLOW MORNINGS &nbsp; • &nbsp;</div></div>
+
+<section class="intro"><div><h2>Not a resort.<br><em>A way of life.</em></h2></div><div><p>Casa Viva sits between a quiet fishing village and a ribbon of warm Mediterranean water. Come for the room. Stay for the rhythm.</p><a class="textlink" href="#experiences">Discover the house →</a></div></section>
+
+<section class="stay" id="stay"><div class="sectionhead"><h2>Choose your stay</h2><p>Every room is different. Natural linen, local stone, open windows and a view worth waking up for.</p></div>
+<div class="rooms">
+<article class="room"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=85"><div class="room-info"><small>01 · Signature</small><h3>The Sea Room</h3><span>King bed · terrace · ocean view</span></div></article>
+<article class="room"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=85"><div class="room-info"><small>02 · Garden</small><h3>The Courtyard</h3><span>Queen bed · garden · outdoor shower</span></div></article>
+<article class="room"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"><div class="room-info"><small>03 · House</small><h3>The Villa</h3><span>2 bedrooms · private pool · kitchen</span></div></article>
+</div></section>
+
+<section class="experience" id="experiences"><div class="exp-img"></div><div class="exp-copy"><div class="eyebrow">Beyond the room</div><h2>Your stay,<br>your rhythm.</h2><p>We don't schedule your holiday. We give you the ingredients: a boat at sunrise, a table under an olive tree, a massage after the sea and a village that knows your name.</p><div class="experience-list"><div><span>Private boat day</span><b>→</b></div><div><span>Olive grove lunch</span><b>→</b></div><div><span>Sunset sailing</span><b>→</b></div><div><span>House spa ritual</span><b>→</b></div></div></div></section>
+
+<section class="day" id="day"><div class="daygrid"><h2>A day<br>at Casa<br>Viva.</h2><div class="timeline">
+<div class="time"><b>07:30</b><div><h3>First light</h3><p>Swim before breakfast. The bay is yours.</p></div></div>
+<div class="time"><b>09:00</b><div><h3>Long breakfast</h3><p>Warm bread, local fruit, coffee and the newspaper.</p></div></div>
+<div class="time"><b>13:30</b><div><h3>Lunch outside</h3><p>Market fish, cold wine and nowhere else to be.</p></div></div>
+<div class="time"><b>17:45</b><div><h3>Golden hour</h3><p>Take the old road up to the lighthouse.</p></div></div>
+<div class="time"><b>21:00</b><div><h3>Under the stars</h3><p>One last drink, then the sound of the sea.</p></div></div>
+</div></div></section>
+
+<section class="gallery"><div class="gallery-grid"><div class="g1"></div><div class="g2"></div><div class="g3"></div></div></section>
+
+<section class="reserve" id="contact"><div><div class="eyebrow">Your room is waiting</div><h2>Come for<br>the coast.</h2></div><form class="form" onsubmit="event.preventDefault();alert('Thank you — our reservations team will contact you shortly.');"><input placeholder="Your name" required><input type="email" placeholder="Email address" required><input type="date"><input type="date"><select><option>2 guests</option><option>1 guest</option><option>3 guests</option><option>4 guests</option></select><select><option>Sea Room</option><option>Courtyard</option><option>Villa</option></select><button>REQUEST AVAILABILITY →</button></form></section>
+
+<footer><div class="footlogo">CASA VIVA</div><div class="footerlinks"><a href="#">Instagram</a><a href="#">Directions</a><a href="#">Privacy</a><span>© 2026 Casa Viva</span></div></footer>
+<div class="mobilebar"><a href="#stay">ROOMS</a><a href="#experiences">EXPLORE</a><a href="#contact">BOOK</a></div>
+</body></html>

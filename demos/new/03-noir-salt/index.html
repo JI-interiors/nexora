@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Noir & Salt — Restaurant</title><meta name="description" content="Noir & Salt is a contemporary restaurant serving seasonal food, wine and late-night hospitality."><link rel="stylesheet" href="style.css">  <meta name="robots" content="noindex, nofollow, noarchive">
+
+<style id="nexora-home-return">
+.nexora-home-return{position:fixed;left:18px;top:18px;z-index:2147483647;display:inline-flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(10,10,14,.82);color:#fff;text-decoration:none;font:700 12px/1 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:.04em;backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,.22);transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.nexora-home-return:hover{transform:translateY(-2px);background:#ff5a1f;color:#111;border-color:#ff5a1f}
+.nexora-home-return span{font-size:16px;line-height:0}
+@media(max-width:640px){.nexora-home-return{left:10px;top:10px;padding:9px 11px;font-size:11px}}
+</style>
+</head><body>
+<a class="nexora-home-return" href="../../../index.html" aria-label="Back to NEXORA home"><span>←</span> NEXORA</a>
+
+<div class="top">OPEN TONIGHT · DINNER 5:30–11:00 · WALK-INS WELCOME</div>
+<nav><a class="logo" href="index.html">NOIR & SALT</a><div class="links"><a href="#menu">Menu</a><a href="#story">Story</a><a href="#space">The Room</a><a href="#visit">Visit</a></div><a class="book" href="#reserve">Book a table</a></nav>
+<header class="hero"><div class="hero-copy"><div class="eyebrow">Contemporary kitchen · New York</div><h1>Come hungry.<br>Stay late.</h1><p>A seasonal kitchen built around open-fire cooking, bright produce and the kind of room you want to linger in.</p><div class="actions"><a class="btn" href="#reserve">Reserve a table</a><a class="btn alt" href="#menu">See tonight's menu</a></div></div></header>
+<div class="info"><div><b>Tonight</b>5:30 PM — 11:00 PM</div><div><b>Find us</b>18 Mercer Street, New York</div><div><b>Call</b>+1 212 555 0198</div></div>
+<section id="story" class="intro"><div><div class="kicker">The kitchen</div><h2>Fire, salt,<br>season.</h2></div><div><p class="lead">Noir & Salt is a neighbourhood restaurant with a little theatre in its cooking. The menu changes with the market, but the idea stays simple: excellent ingredients, direct heat and food made to be shared.</p><a class="btn" href="story.html">Meet the kitchen</a></div></section>
+<section id="menu" class="menu-wrap"><div class="menu-head"><div><div class="kicker">Tonight's menu</div><h2>From the pass.</h2></div><a class="btn alt" href="menu.html">Full menu</a></div><div class="menu-grid">
+<div class="dish"><div class="dish-top"><span>Charred sourdough</span><span>$12</span></div><p>Whipped cultured butter · smoked sea salt</p></div>
+<div class="dish"><div class="dish-top"><span>Market crudo</span><span>$19</span></div><p>Citrus · green olive · fennel pollen</p></div>
+<div class="dish"><div class="dish-top"><span>Ember carrots</span><span>$15</span></div><p>Labneh · pistachio · chili oil</p></div>
+<div class="dish"><div class="dish-top"><span>Coal-roasted chicken</span><span>$34</span></div><p>Preserved lemon · pan jus · herbs</p></div>
+<div class="dish"><div class="dish-top"><span>Dry-aged strip</span><span>$48</span></div><p>Black garlic · charred onion · jus</p></div>
+<div class="dish"><div class="dish-top"><span>Olive oil cake</span><span>$13</span></div><p>Blood orange · mascarpone · almond</p></div>
+</div></section>
+<section id="space" class="feature"><div class="feature-img"></div><div class="feature-copy"><div class="kicker">The room</div><h2>A table worth dressing up for.</h2><p class="lead">Low light, walnut, hand-finished plaster and an open kitchen. Come for dinner, stay for another glass.</p><a class="btn" href="#reserve">Plan your evening</a></div></section>
+<section><div class="kicker">The table</div><h2>Food first.<br>Atmosphere always.</h2><div class="gallery"><img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=80" loading="lazy"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80" loading="lazy"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1000&q=80" loading="lazy"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=80" loading="lazy"></div></section>
+<section id="reserve" class="reserve"><div><div class="kicker">Reservations</div><h2>Your table<br>is waiting.</h2><p class="lead">For parties of 8 or more, private dining and events, contact the restaurant directly.</p></div><form class="form" onsubmit="return fakeBook(event)"><input required placeholder="Name"><input required type="email" placeholder="Email"><input required type="date"><select required><option value="">Time</option><option>6:00 PM</option><option>7:30 PM</option><option>9:00 PM</option></select><input required type="number" min="1" max="12" placeholder="Guests"><input class="full" placeholder="Notes / occasion"><button class="btn full" type="submit">Request reservation</button><div id="msg" class="full"></div></form></section>
+<footer><div class="footer-title">NOIR & SALT</div><div class="foot"><p>18 Mercer Street<br>New York, NY 10013</p><a href="tel:+12125550198">+1 212 555 0198</a></div><div class="foot"><p>Tue–Thu 5:30–10:30<br>Fri–Sat 5:30–11:00<br>Sun 5:00–9:30</p></div></footer>
+<div class="mobilebar"><a href="tel:+12125550198">CALL</a><a href="#menu">MENU</a><a href="#reserve">RESERVE</a></div>
+<script>function fakeBook(e){e.preventDefault();document.getElementById('msg').textContent='Thanks — your reservation request has been received for this demo.';return false}</script></body></html>
