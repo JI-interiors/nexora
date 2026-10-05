@@ -1,4 +1,4 @@
-/* NEXORA package interaction layer — scoped to service package cards. */
+/* NALVO package interaction layer — scoped to service package cards. */
 (() => {
   const page = document.title.toLowerCase();
   const service = page.includes('web design') ? 'Web Design'

@@ -1,1 +1,0 @@
-North & House real-estate demo. Replace demo listings, contact details and image licensing before production.

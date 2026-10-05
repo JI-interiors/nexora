@@ -1,0 +1,28 @@
+NALVO — IMAGE DISPLAY / DEPENDENCY RE-AUDIT
+
+Issue reported:
+Portfolio hero cards appeared black/empty in local preview even though the nine generated images existed.
+
+Root cause:
+The homepage and demo pages used root-absolute local image paths such as /images/.... When the site was opened directly from the filesystem (file://) or certain local VS Code previews, /images/ resolves to the filesystem/server root rather than the site's own images folder. The browser therefore could not load the images.
+
+Fix applied:
+- Homepage portfolio data-bg paths changed from /images/... to images/...
+- Homepage image preload changed to images/...
+- All demo HTML image paths changed to the correct relative ../../../images/... path.
+- Demo CSS background-image paths changed to ../../../images/...
+- Atelier nested JS image paths changed to ../../../../images/...
+- No visual/layout redesign was made.
+- Existing local WebP portfolio images retained.
+- External font/image dependencies remain removed; WhatsApp links remain intentionally external because they perform the requested WhatsApp action.
+
+Validation:
+- 9 local portfolio WebP files present.
+- Local asset reference audit: 0 missing assets.
+- script.js syntax: PASS.
+- package-interactions.js syntax: PASS.
+- Original hero/card/menu/interaction markup preserved.
+
+Deployment note:
+Relative image paths work both when the project is opened locally and when deployed at https://nalvo.in/.
+SEO absolute URLs in canonical/Open Graph/schema metadata intentionally remain absolute because search engines require the production domain.

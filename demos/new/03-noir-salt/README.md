@@ -1,1 +1,0 @@
-Noir & Salt — Restaurant demo. Replace demo contact/reservation details and image licenses before production.

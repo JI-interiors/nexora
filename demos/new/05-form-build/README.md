@@ -1,1 +1,0 @@
-Unorthodox FORM/BUILD construction demo. Replace demo details and image licensing before production.

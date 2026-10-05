@@ -156,6 +156,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     loadedBg.add(el);
     const img = new Image();
     img.decoding = 'async';
+    img.fetchPriority = index === active ? 'high' : 'low';
     img.onload = () => { el.style.backgroundImage = `url(\"${url.replace(/\"/g,'\\\"')}\")`; };
     img.src = url;
   }
@@ -250,6 +251,7 @@ document.addEventListener('keydown',function(e){
 (function(){
   const toggle=document.getElementById('menuToggle');
   const menu=document.getElementById('mobileMenu');
+  const closeButton=document.getElementById('mobileMenuClose');
   if(!toggle||!menu) return;
   let lastFocused = null;
   const setOpen=(open)=>{
@@ -264,11 +266,12 @@ document.addEventListener('keydown',function(e){
     else if(lastFocused && typeof lastFocused.focus==='function') setTimeout(()=>lastFocused.focus(),20);
   };
   toggle.addEventListener('click',()=>setOpen(!menu.classList.contains('is-open')));
+  closeButton?.addEventListener('click',()=>setOpen(false));
   menu.querySelectorAll('[data-menu-link]').forEach(link=>link.addEventListener('click',()=>setOpen(false)));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('is-open')) setOpen(false)});
 })();
 
-/* NEXORA contact actions */
+/* NALVO contact actions */
 (function(){
   // Replace this once with the business WhatsApp number, digits only, including country code.
   // Example: '919876543210'
@@ -278,7 +281,7 @@ document.addEventListener('keydown',function(e){
   const note = document.getElementById('projectFormNote');
 
   function openWhatsApp(message){
-    const text = encodeURIComponent(message || 'Hello Nexora, I would like to discuss a website project.');
+    const text = encodeURIComponent(message || 'Hello Nalvo, I would like to discuss a website project.');
     const url = (!WHATSAPP_NUMBER || WHATSAPP_NUMBER.includes('REPLACE_'))
       ? 'https://api.whatsapp.com/send?text=' + text
       : 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text;
@@ -288,7 +291,7 @@ document.addEventListener('keydown',function(e){
   document.querySelectorAll('.js-whatsapp').forEach(btn => btn.addEventListener('click', e => {
     e.preventDefault();
     e.stopPropagation();
-    const message = btn.dataset.whatsappMessage || 'Hello Nexora, I would like to discuss a website project.';
+    const message = btn.dataset.whatsappMessage || 'Hello Nalvo, I would like to discuss a website project.';
     const url = (!WHATSAPP_NUMBER || WHATSAPP_NUMBER.includes('REPLACE_'))
       ? 'https://wa.me/?text=' + encodeURIComponent(message)
       : 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
@@ -302,8 +305,8 @@ document.addEventListener('keydown',function(e){
     document.body.classList.toggle('modal-open', open);
     if(open){
       const params = new URLSearchParams(window.location.search);
-      const selectedService = params.get('service') || sessionStorage.getItem('nexoraSelectedService') || '';
-      const selectedPackage = params.get('package') || sessionStorage.getItem('nexoraSelectedPackage') || '';
+      const selectedService = params.get('service') || sessionStorage.getItem('nalvoSelectedService') || '';
+      const selectedPackage = params.get('package') || sessionStorage.getItem('nalvoSelectedPackage') || '';
       const packageField = form?.querySelector('[name="package"]');
       const messageField = form?.querySelector('[name="message"]');
       if(packageField && (selectedService || selectedPackage)) packageField.value = [selectedService, selectedPackage].filter(Boolean).join(' — ');
@@ -342,7 +345,7 @@ document.querySelectorAll('.js-explore').forEach(btn => btn.addEventListener('cl
     e.preventDefault();
     const data = new FormData(form);
     const selectedPackage = data.get('package');
-    const message = `Hello Nexora, I would like to discuss a website project.\n\nName: ${data.get('name')}\nPhone: ${data.get('phone')}\nEmail: ${data.get('email')}\nService / Package: ${selectedPackage || 'Not specified'}\nMessage: ${data.get('message')}`;
+    const message = `Hello Nalvo, I would like to discuss a website project.\n\nName: ${data.get('name')}\nPhone: ${data.get('phone')}\nEmail: ${data.get('email')}\nService / Package: ${selectedPackage || 'Not specified'}\nMessage: ${data.get('message')}`;
     if(!WHATSAPP_NUMBER || WHATSAPP_NUMBER.includes('REPLACE_')){
       if(note) note.textContent = 'Opening WhatsApp so you can choose the chat and send your enquiry.';
       openWhatsApp(message);

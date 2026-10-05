@@ -1,1 +1,0 @@
-Lumen Dental demo. Replace demo contact details and image licensing before production.

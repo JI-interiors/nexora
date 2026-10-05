@@ -484,7 +484,7 @@ body.menu-open{overflow:hidden}
 @media(min-width:901px){.mobile-menu{display:none!important}}
 
 /* =========================================================
-   NEXORA / COMMAND MENU — dark orange editorial interface
+   NALVO / COMMAND MENU — dark orange editorial interface
    Single close control: the header hamburger becomes the X.
    ========================================================= */
 :root{
@@ -606,7 +606,7 @@ body.menu-open{overflow:hidden}
 
 /* tiny vertical signature — deliberately asymmetric */
 .mobile-menu-inner::after{
-  content:"NEXORA  /  DIGITAL SYSTEMS";
+  content:"NALVO  /  DIGITAL SYSTEMS";
   position:absolute;right:3px;bottom:30px;
   writing-mode:vertical-rl;transform:rotate(180deg);
   font:700 6px/1 "Space Grotesk";letter-spacing:.26em;color:#4f4b46;
@@ -618,7 +618,7 @@ body.menu-open{overflow:hidden}
 @media(min-width:901px){.mobile-menu{display:none!important}}
 
 /* =========================================================
-   NEXORA MENU v4 — FLOATING ORANGE COMMAND PANEL
+   NALVO MENU v4 — FLOATING ORANGE COMMAND PANEL
    Orange is the base; the page remains visible around it.
    ========================================================= */
 :root{
@@ -680,7 +680,7 @@ body.menu-open{overflow:hidden}
     mask-image:linear-gradient(to bottom,black,transparent 88%);
   }
   .mobile-menu-inner::after{
-    content:"NEXORA";
+    content:"NALVO";
     position:absolute;
     right:-22px;
     bottom:64px;
@@ -853,7 +853,7 @@ body.menu-open{overflow:hidden}
   .cursor-glow{display:none}
 }
 
-/* NEXORA surgical fixes: fixed header + readable multicolour sample chrome. */
+/* NALVO surgical fixes: fixed header + readable multicolour sample chrome. */
 .site-header{
   position:fixed;
   top:0;left:0;right:0;
@@ -903,14 +903,14 @@ main#top{padding-top:82px;}
 #work,#services,#process,#contact-form{scroll-margin-top:96px;}
 
 
-/* NEXORA menu layering fix: the open menu must cover page CTAs/content. */
+/* NALVO menu layering fix: the open menu must cover page CTAs/content. */
 @media(max-width:900px){
   .mobile-menu{z-index:1000!important}
   .menu-toggle{z-index:1001!important}
   body.menu-open .hero-actions{z-index:1!important}
 }
 
-/* NEXORA premium services refresh — inspired by the supplied neon/glass reference. */
+/* NALVO premium services refresh — inspired by the supplied neon/glass reference. */
 .services-section{position:relative;overflow:hidden;padding-top:105px}
 .services-section:before{content:"";position:absolute;inset:0 -15%;pointer-events:none;background:radial-gradient(circle at 16% 35%,rgba(0,116,255,.13),transparent 25%),radial-gradient(circle at 78% 35%,rgba(255,106,26,.11),transparent 24%),radial-gradient(circle at 72% 82%,rgba(124,92,255,.12),transparent 28%)}
 .services-intro{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:60px;margin-bottom:52px}
@@ -938,3 +938,74 @@ main#top{padding-top:82px;}
 .visual-health{display:flex;align-items:center;gap:12px;padding:18px;border:1px solid rgba(38,222,195,.35);border-radius:14px;background:rgba(3,61,55,.28);backdrop-filter:blur(10px)}.health-ring{width:90px;height:90px;border-radius:50%;display:grid;place-items:center;border:8px solid #26e0c4;border-right-color:rgba(38,224,196,.15);color:#fff;font-family:"Space Grotesk";font-size:23px;box-shadow:0 0 35px rgba(38,224,196,.22)}.health-list{display:flex;flex-direction:column;gap:9px}.health-list span{font-size:8px;color:#d8f7f2}.visual-server{display:flex;align-items:center;justify-content:center}.server-stack{width:72%;display:flex;flex-direction:column;gap:10px;position:relative;z-index:2}.server-stack span{height:40px;border:1px solid rgba(81,157,255,.5);border-radius:8px;background:linear-gradient(90deg,rgba(34,91,170,.45),rgba(34,150,255,.13));box-shadow:0 0 25px rgba(34,127,255,.22);position:relative}.server-stack span:after{content:"";position:absolute;right:12px;top:50%;width:5px;height:5px;border-radius:50%;background:#43a7ff;box-shadow:0 0 12px #43a7ff;transform:translateY(-50%)}.server-globe{position:absolute;width:175px;height:175px;border:1px solid rgba(85,151,255,.25);border-radius:50%;box-shadow:inset 30px 0 0 rgba(70,130,255,.03),0 0 60px rgba(40,119,255,.12)}
 @media(max-width:900px){.services-intro{display:block}.services-intro>p{margin-top:22px;max-width:620px}.services-grid-premium{grid-template-columns:1fr 1fr}.services-grid-premium .service,.services-grid-premium .service:nth-child(4),.services-grid-premium .service:nth-child(5){grid-column:auto}.services-grid-premium .service{min-height:390px}}
 @media(max-width:650px){.services-section{padding-top:80px}.services-intro h2{font-size:50px}.services-intro{margin-bottom:35px}.services-grid-premium{grid-template-columns:1fr;gap:14px}.services-grid-premium .service{min-height:410px;padding:23px;border-radius:20px}.service-copy{max-width:78%}.services-grid-premium .service h3{font-size:25px}.service-visual{width:68%;height:55%;right:-8px;bottom:-18px}.service-link{margin-top:18px}.visual-screen strong{font-size:19px}.visual-screen em{font-size:15px}}
+
+
+/* FINAL PRODUCTION FIXES — isolated, no visual redesign */
+@media(max-width:900px){
+  /* The menu is now outside the fixed header in the DOM, so it can occupy the full viewport. */
+  .mobile-menu{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;z-index:10000!important;}
+  .mobile-menu-inner{position:absolute!important;top:14px!important;right:14px!important;bottom:14px!important;left:14px!important;width:auto!important;height:auto!important;min-height:0!important;max-height:calc(100dvh - 28px)!important;overflow:hidden!important;}
+  .mobile-menu-links{overflow-y:auto!important;overscroll-behavior:contain!important;-webkit-overflow-scrolling:touch!important;}
+  .menu-toggle{position:relative!important;z-index:10001!important;}
+}
+
+/* NALVO MENU — close control must stay above the orange panel.
+   The existing hamburger becomes the integrated X when open. */
+@media (max-width:900px){
+  body.menu-open .site-header{z-index:1101;}
+  body.menu-open .site-header .logo,
+  body.menu-open .site-header .nav,
+  body.menu-open .site-header .nav-cta{visibility:hidden;pointer-events:none;}
+  body.menu-open .menu-toggle{
+    position:fixed;
+    top:27px;
+    right:27px;
+    z-index:1102;
+    width:42px;
+    height:42px;
+    border:1px solid rgba(17,16,15,.28);
+    border-radius:11px;
+    background:rgba(255,242,231,.28);
+    box-shadow:none;
+  }
+  body.menu-open .menu-toggle span{background:var(--menu-ink);}
+  body.menu-open .menu-toggle.is-open span:nth-child(1),
+  body.menu-open .menu-toggle.is-open span:nth-child(3){width:20px;height:2px;}
+}
+
+
+/* NALVO MENU CLOSE — dedicated, integrated close control inside the orange panel. */
+@media (max-width:900px){
+  .mobile-menu-close{
+    position:absolute!important;
+    top:14px!important;
+    right:14px!important;
+    width:48px!important;
+    height:48px!important;
+    display:grid!important;
+    place-items:center!important;
+    z-index:20!important;
+    border:1px solid rgba(17,16,15,.30)!important;
+    border-radius:12px!important;
+    background:rgba(255,242,231,.20)!important;
+    color:var(--menu-ink)!important;
+    font:500 30px/1 Arial,sans-serif!important;
+    cursor:pointer!important;
+    padding:0!important;
+    box-shadow:none!important;
+    -webkit-appearance:none!important;
+    appearance:none!important;
+  }
+  .mobile-menu-close:hover,.mobile-menu-close:focus-visible{
+    background:rgba(255,242,231,.34)!important;
+    outline:2px solid rgba(17,16,15,.18)!important;
+    outline-offset:2px!important;
+  }
+  body.menu-open .menu-toggle{
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+}
+@media (min-width:901px){
+  .mobile-menu-close{display:none!important;}
+}

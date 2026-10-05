@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Demo portfolio pages carry their own noindex,nofollow directives.
-# Add: Sitemap: https://YOUR-REAL-DOMAIN/sitemap.xml after the production domain is known.
+# Portfolio demo pages are noindex,nofollow and are excluded from the XML sitemap.
+Sitemap: https://nalvo.in/sitemap.xml
