@@ -1,1 +1,172 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Nexora Web Design services for ambitious businesses worldwide."><title>Web Design — Nexora</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="services.css"></head><body><div class="grid"></div><header><a class="logo" href="index.html"><b>N</b>NEXORA</a><a class="back" href="index.html#services">← Back to Nexora</a></header><main><section class="hero"><div><div class="kicker">NEXORA / 01 — 06</div><h1>Web Design<br><em>that works.</em></h1><p>Distinctive interfaces that make a business feel credible, premium and memorable from the first click.</p></div><div class="hero-art" data-number="01"><span class="art-label">SERVICE / 01</span><div class="art-lines"></div></div></section><section class="content"><div class="kicker">WHAT THIS COVERS</div><h2>A sharper digital system<br>for your business.</h2><p>We treat web design as part of the whole customer experience—not an isolated deliverable. The result should look distinctive, load quickly, communicate clearly and make the next action obvious.</p><div class="features"><article class="feature"><span>01</span><h3>Interface direction</h3><p>Built around your brand, audience and commercial goal.</p></article><article class="feature"><span>02</span><h3>Responsive design</h3><p>Designed to work smoothly across desktop, tablet and mobile.</p></article><article class="feature"><span>03</span><h3>Conversion-focused layouts</h3><p>Connected to a practical workflow that supports growth after launch.</p></article></div></section><section class="cta"><h2>Let's build it<br>properly.</h2><a href="index.html#contact">Let's talk ↗</a></section></main><footer class="footer"><span>© 2026 Nexora Studio. All rights reserved.</span><span>Developed by Ibrahim Khurshid.</span></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Nexora Web Design packages — modern, responsive, conversion-focused websites for businesses worldwide.">
+  <link rel="canonical" href="./web-design.html" />
+  <meta property="og:title" content="Web Design Packages — Nexora" />
+  <meta property="og:description" content="Modern, responsive and conversion-focused website design packages for startups, local businesses, service companies and growing brands." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Web Design Packages — Nexora" />
+  <meta name="twitter:description" content="Modern, responsive and conversion-focused website design packages for startups, local businesses, service companies and growing brands." />
+<title>Web Design Packages — Nexora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="services.css">
+<style>
+/* WEB DESIGN PAGE ONLY — scoped package system. No shared site styles are modified. */
+.wd-packages{padding:1vh 8vw 10vh;max-width:1500px;margin:0 auto}
+.wd-intro{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:42px}
+.wd-intro h2{font-size:clamp(42px,6vw,82px);line-height:.9;letter-spacing:-.055em;margin:10px 0 0;max-width:800px}
+.wd-intro p{max-width:430px;color:var(--muted);line-height:1.7;margin:0}
+.wd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.wd-card{position:relative;background:rgba(17,17,26,.82);border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:30px;overflow:hidden;transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.wd-card:hover{transform:translateY(-5px);border-color:rgba(255,106,26,.55);background:rgba(22,20,25,.95)}
+.wd-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 100% 0,rgba(255,106,26,.16),transparent 34%);pointer-events:none}
+.wd-card>*{position:relative}
+.wd-top{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:30px}
+.wd-number{font-size:11px;letter-spacing:.18em;color:var(--orange);font-weight:800}
+.wd-badge{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#111;background:var(--orange);padding:7px 10px;border-radius:999px;font-weight:800}
+.wd-card h3{font-size:clamp(28px,3vw,42px);letter-spacing:-.045em;line-height:1;margin:0 0 9px}
+.wd-card h4{font-size:15px;margin:0;color:#ddd;font-weight:600}
+.wd-price{display:flex;align-items:baseline;gap:5px;margin:27px 0 8px}
+.wd-price strong{font-size:clamp(42px,5vw,62px);letter-spacing:-.06em;line-height:.9}
+.wd-price span{color:var(--muted);font-size:13px}
+.wd-desc{color:var(--muted);font-size:14px;line-height:1.65;min-height:70px;margin:0 0 24px}
+.wd-best{font-size:12px;line-height:1.5;color:#e4e1dc;padding:12px 14px;border-left:2px solid var(--orange);background:rgba(255,106,26,.07);margin-bottom:25px}
+.wd-card ul{list-style:none;padding:0;margin:0;border-top:1px solid rgba(255,255,255,.08)}
+.wd-card li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px;color:#d5d2d0;line-height:1.45;display:flex;gap:10px}
+.wd-card li:before{content:"+";color:var(--orange);font-weight:800;flex:0 0 auto}
+.wd-delivery{display:flex;justify-content:space-between;gap:15px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:var(--muted)}
+.wd-delivery strong{color:#f3f0eb;font-weight:600}
+.wd-featured{border-color:rgba(255,106,26,.65);box-shadow:0 20px 70px rgba(255,106,26,.08)}
+.wd-featured .wd-price strong{color:#fff}
+.wd-pro{grid-column:1/-1;display:grid;grid-template-columns:.75fr 1.25fr;gap:34px;background:linear-gradient(135deg,rgba(255,106,26,.14),rgba(17,17,26,.92) 45%)}
+.wd-pro .wd-summary{padding-right:18px}
+.wd-pro .wd-desc{min-height:0}
+.wd-pro .wd-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.wd-pro .wd-group h5{margin:0 0 12px;color:var(--orange);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.wd-pro .wd-group ul{margin-bottom:24px}
+.wd-pro .wd-group li{font-size:12px}
+.wd-addons{margin-top:85px}
+.wd-addons h3{font-size:clamp(34px,5vw,64px);letter-spacing:-.05em;line-height:.95;margin:10px 0 30px}
+.wd-addon-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)}
+.wd-addon{background:rgba(17,17,26,.9);padding:24px;min-height:155px}
+.wd-addon strong{display:block;font-size:25px;letter-spacing:-.04em;margin-bottom:14px}
+.wd-addon h4{margin:0 0 8px;font-size:15px}
+.wd-addon p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+.wd-note{color:#777;font-size:11px;margin-top:16px}
+@media(max-width:900px){.wd-intro{display:block}.wd-intro p{margin-top:22px}.wd-grid{grid-template-columns:1fr}.wd-pro{grid-column:auto;display:block}.wd-pro .wd-summary{padding-right:0;margin-bottom:28px}.wd-addon-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.wd-packages{padding-left:6vw;padding-right:6vw}.wd-card{padding:22px;border-radius:22px}.wd-pro .wd-columns{grid-template-columns:1fr;gap:0}.wd-addon-grid{grid-template-columns:1fr}.wd-delivery{display:block}.wd-delivery span{display:block;margin-top:7px}.wd-intro h2{font-size:44px}}
+
+/* Consistent expandable package controls — scoped to Web Design only. */
+.wd-card .package-details{overflow:hidden;transition:max-height .32s ease,opacity .22s ease,margin .32s ease;}
+.wd-card.package-collapsed .package-details{max-height:0;opacity:0;pointer-events:none;margin-top:0;}
+.wd-card.package-expanded .package-details{max-height:2200px;opacity:1;pointer-events:auto;margin-top:18px;}
+.wd-card .package-controls{display:grid;grid-template-columns:1fr;gap:10px;margin-top:20px;position:relative;z-index:3;}
+.wd-card .package-toggle,.wd-card .package-cta{width:100%;min-height:48px;display:flex;align-items:center;justify-content:center;gap:10px;border-radius:12px;font:700 12px/1 Inter,Arial,sans-serif;cursor:pointer;text-decoration:none;transition:transform .2s ease,border-color .2s ease,background .2s ease;}
+.wd-card .package-toggle{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.035);color:var(--ink);}
+.wd-card .package-toggle:hover,.wd-card .package-toggle:focus-visible{border-color:var(--orange);background:rgba(255,106,26,.08);outline:none;}
+.wd-card .package-toggle b{color:var(--orange);font-size:18px;font-weight:500;}
+.wd-card .package-cta{background:var(--orange);color:#111;border:1px solid var(--orange);}
+.wd-card .package-cta:hover,.wd-card .package-cta:focus-visible{transform:translateY(-2px);background:var(--orange2);outline:none;}
+.wd-card .package-cta span{font-size:16px;}
+@media(max-width:560px){.wd-card.package-expanded .package-details{max-height:3500px;}}
+@media(prefers-reduced-motion:reduce){.wd-card .package-details,.wd-card .package-toggle,.wd-card .package-cta{transition:none;}}
+</style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%237c5cff%22/%3E%3Ctext x=%2232%22 y=%2243%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2236%22 font-weight=%22700%22 fill=%22white%22%3EN%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div class="grid"></div>
+<header><a class="logo" href="index.html"><b>N</b>NEXORA</a><a class="back" href="index.html#services">← Back to Nexora</a></header>
+<main>
+<section class="hero"><div><div class="kicker">NEXORA / 01 — 06</div><h1>Web Design<br><em>that works.</em></h1><p>Distinctive interfaces that make a business feel credible, premium and memorable from the first click.</p></div><div class="hero-art" data-number="01"><span class="art-label">SERVICE / 01</span><div class="art-lines"></div></div></section>
+
+<section class="wd-packages" id="packages">
+  <div class="wd-intro">
+    <div><div class="kicker">WEB DESIGN / PACKAGES</div><h2>Choose the build<br><em style="font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.62)">that fits your next move.</em></h2></div>
+    <p>Four clear ways to build a stronger online presence — from a focused starter site to a complete website and SEO growth system.</p>
+  </div>
+
+  <div class="wd-grid">
+    <article class="wd-card">
+      <div class="wd-top"><span class="wd-number">01 / STARTER</span></div>
+      <h3>Starter</h3><h4>Professional Starter Website</h4>
+      <div class="wd-price"><strong>$499</strong><span>one-time</span></div>
+      <p class="wd-desc">For new businesses and small businesses that need a professional online presence that makes it easy for customers to contact you.</p>
+      <div class="wd-best"><strong>Best for:</strong> Startups, freelancers, tradespeople and small local businesses.</div>
+      <ul>
+        <li>Up to 3 pages</li><li>Custom modern website design</li><li>Mobile, tablet &amp; desktop responsive</li><li>Professional homepage</li><li>About page + Contact page</li><li>Click-to-call phone button</li><li>Contact / enquiry form</li><li>Google Maps integration</li><li>Social media links</li><li>Basic on-page SEO</li><li>Basic speed optimization</li><li>SSL / HTTPS setup assistance</li><li>Google Analytics setup</li><li>Google Search Console setup</li><li>Conversion-focused CTA buttons</li><li>1 round of revisions</li><li>Website deployment</li>
+      </ul>
+      <div class="wd-delivery"><span>Delivery</span><strong>5–7 business days</strong></div>
+    </article>
+
+    <article class="wd-card wd-featured">
+      <div class="wd-top"><span class="wd-number">02 / BUSINESS</span><span class="wd-badge">Most Popular</span></div>
+      <h3>Business</h3><h4>Complete Business Website</h4>
+      <div class="wd-price"><strong>$899</strong><span>one-time</span></div>
+      <p class="wd-desc">Our most popular package for businesses that want a professional website built to generate enquiries, calls and conversations.</p>
+      <div class="wd-best"><strong>Best for:</strong> Plumbers, electricians, HVAC companies, roofers, builders, cleaners, restaurants, agencies and other service businesses.</div>
+      <ul>
+        <li>Everything in Starter</li><li>Up to 7 pages</li><li>Premium custom design</li><li>High-converting homepage</li><li>Up to 4 dedicated service pages</li><li>Testimonials / reviews section</li><li>FAQ section</li><li>Google Maps integration</li><li>Click-to-call buttons</li><li>WhatsApp / chat integration</li><li>Contact &amp; enquiry forms</li><li>Social media integration</li><li>Basic local SEO structure</li><li>SEO-friendly page titles &amp; descriptions</li><li>Image optimization + speed optimization</li><li>Google Analytics + Search Console</li><li>Schema markup setup</li><li>Conversion-focused CTAs</li><li>2 rounds of revisions</li><li>Website deployment</li>
+      </ul>
+      <div class="wd-delivery"><span>Delivery</span><strong>7–10 business days</strong></div>
+    </article>
+
+    <article class="wd-card">
+      <div class="wd-top"><span class="wd-number">03 / GROWTH</span></div>
+      <h3>Growth</h3><h4>Lead Generation Website</h4>
+      <div class="wd-price"><strong>$1,499</strong><span>one-time</span></div>
+      <p class="wd-desc">For businesses that don't just want a website — they want more enquiries, calls and customers.</p>
+      <div class="wd-best"><strong>Best for:</strong> Businesses that depend on leads, phone calls, bookings and enquiries.</div>
+      <ul>
+        <li>Everything in Business</li><li>Up to 12 pages</li><li>Premium custom UI / UX design</li><li>Up to 8 dedicated service / location pages</li><li>Conversion-focused page structure</li><li>Lead-generation strategy</li><li>Advanced contact / enquiry forms</li><li>Click-to-call throughout the website</li><li>WhatsApp / chat integration</li><li>Google Maps &amp; local business integration</li><li>Customer reviews / testimonials</li><li>FAQ sections</li><li>Local SEO structure</li><li>Keyword-focused page content structure</li><li>Advanced on-page SEO + schema markup</li><li>Image compression &amp; optimization</li><li>Advanced speed + Core Web Vitals optimization</li><li>Google Analytics 4 + Search Console</li><li>Conversion + form conversion tracking</li><li>Basic Google Business Profile guidance</li><li>3 rounds of revisions</li><li>30 days post-launch support</li>
+      </ul>
+      <div class="wd-delivery"><span>Delivery</span><strong>10–14 business days</strong></div>
+    </article>
+
+    <article class="wd-card wd-pro">
+      <div class="wd-summary">
+        <div class="wd-top"><span class="wd-number">04 / GROWTH PRO</span><span class="wd-badge">Full System</span></div>
+        <h3>Growth Pro</h3><h4>Website + SEO Growth System</h4>
+        <div class="wd-price"><strong>$2,499</strong><span>one-time</span></div>
+        <p class="wd-desc">Our complete package for businesses ready to seriously improve their online presence. A website built as a foundation for SEO, Google visibility and lead generation.</p>
+        <div class="wd-best"><strong>Best for:</strong> Established businesses, competitive local businesses and companies that want their website to become a serious marketing asset.</div>
+        <div class="wd-delivery"><span>Delivery</span><strong>2–3 weeks</strong></div>
+      </div>
+      <div class="wd-columns">
+        <div class="wd-group"><h5>Website</h5><ul><li>Up to 20 pages</li><li>Premium custom design</li><li>Advanced conversion optimization</li><li>Unlimited service / location structure*</li><li>Advanced enquiry forms</li><li>Booking / request-a-quote functionality</li><li>WhatsApp integration</li><li>Review / testimonial integration</li><li>Advanced analytics &amp; tracking</li></ul></div>
+        <div class="wd-group"><h5>SEO</h5><ul><li>SEO website structure</li><li>Keyword research</li><li>Competitor analysis</li><li>Keyword mapping</li><li>On-page SEO</li><li>Meta titles &amp; descriptions</li><li>Heading optimization</li><li>Image SEO</li><li>Internal linking</li><li>Local SEO structure</li><li>Schema markup</li><li>Sitemap &amp; robots.txt setup</li><li>Google Search Console setup</li><li>Google Business Profile optimization guidance</li></ul></div>
+        <div class="wd-group"><h5>Performance</h5><ul><li>Speed optimization</li><li>Image optimization</li><li>Mobile optimization</li><li>Core Web Vitals improvements</li><li>Technical SEO checks</li></ul><h5>Tracking</h5><ul><li>Google Analytics 4</li><li>Google Search Console</li><li>Conversion tracking</li><li>Form submission tracking</li><li>Call / CTA tracking</li></ul></div>
+        <div class="wd-group"><h5>Support</h5><ul><li>30 days post-launch support</li><li>4 rounds of revisions</li><li>Website training / walkthrough</li></ul><p class="wd-note">*Subject to agreed project scope.</p></div>
+      </div>
+    </article>
+  </div>
+
+  <section class="wd-addons">
+    <div class="kicker">OPTIONAL / ADD-ONS</div>
+    <h3>Extend the build<br><em style="font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.62)">when you need more.</em></h3>
+    <div class="wd-addon-grid">
+      <article class="wd-addon"><h4>Additional Service Page</h4><strong>$75<span style="font-size:13px;color:var(--muted)">/page</span></strong><p>Add another dedicated service page to expand your offer.</p></article>
+      <article class="wd-addon"><h4>Additional Location Page</h4><strong>$75<span style="font-size:13px;color:var(--muted)">/page</span></strong><p>Create another location-focused page for local visibility.</p></article>
+      <article class="wd-addon"><h4>Landing Page</h4><strong>$199<span style="font-size:13px;color:var(--muted)">/page</span></strong><p>A focused page for campaigns, offers or paid traffic.</p></article>
+      <article class="wd-addon"><h4>Website Maintenance</h4><strong>$99<span style="font-size:13px;color:var(--muted)">/month</span></strong><p>Basic updates, backups, monitoring and minor changes.</p></article>
+      <article class="wd-addon"><h4>SEO Growth</h4><strong>From $299<span style="font-size:13px;color:var(--muted)">/month</span></strong><p>Ongoing SEO, content optimization, technical improvements and reporting.</p></article>
+      <article class="wd-addon"><h4>Google Ads Management</h4><strong>From $299<span style="font-size:13px;color:var(--muted)">/month</span></strong><p>Campaign setup, optimization, conversion tracking and monthly reporting. Ad spend separate.</p></article>
+      <article class="wd-addon"><h4>Extra Revision</h4><strong>$50<span style="font-size:13px;color:var(--muted)">/round</span></strong><p>Add another revision round when the project needs it.</p></article>
+      <article class="wd-addon"><h4>Logo Design</h4><strong>$149</strong><p>A dedicated logo design to complete your new website identity.</p></article>
+      <article class="wd-addon"><h4>Professional Copywriting</h4><strong>From $199</strong><p>Clear, conversion-focused website copy tailored to your business.</p></article>
+    </div>
+  </section>
+</section>
+
+<section class="cta"><h2>Let's build it<br>properly.</h2><a href="index.html#contact">Let's talk ↗</a></section>
+</main>
+<footer class="footer"><span>© 2026 Nexora Studio. All rights reserved.</span><span>Developed by Ibrahim Khurshid.</span></footer>
+<script src="package-interactions.js" defer></script>
+</body>
+</html>
