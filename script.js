@@ -18,6 +18,23 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// Selected Work previews: defer iframe navigation until the card is near the viewport.
+(function(){
+  const frames = Array.from(document.querySelectorAll('.project-live-preview iframe[data-src]'));
+  if (!frames.length) return;
+  const load = frame => {
+    if (!frame.dataset.src || frame.src) return;
+    frame.src = frame.dataset.src;
+  };
+  if (!('IntersectionObserver' in window)) { frames.forEach(load); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { load(entry.target); io.unobserve(entry.target); }
+    });
+  }, { rootMargin: '500px 0px' });
+  frames.forEach(frame => io.observe(frame));
+})();
+
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('pointermove', e => {
     if (window.innerWidth < 800) return;
@@ -51,13 +68,21 @@ document.querySelectorAll('.project-card').forEach(card => {
   let pointerMoved = false;
   let activePointerCard = null;
   let raf;
+  let stageWidth = 700;
+  const updateStageWidth = () => { stageWidth = Math.max(stage.getBoundingClientRect().width || 700, 320); };
+  if ('ResizeObserver' in window) {
+    const stageResizeObserver = new ResizeObserver(updateStageWidth);
+    stageResizeObserver.observe(stage);
+  } else {
+    updateStageWidth();
+  }
 
   // Scattered product-board layout: the active card becomes the featured card,
   // while the other eight cards occupy distinct, overlapping positions around it.
   // One gesture always advances exactly one card.
   function getLayout() {
     const mobile = window.matchMedia('(max-width:650px)').matches;
-    const W = Math.max(stage.clientWidth || 700, 320);
+    const W = stageWidth;
     const compact = W < 900;
     const side = mobile ? Math.min(118, W * .29) : compact ? 180 : 245;
     const far = mobile ? Math.min(105, W * .26) : compact ? 300 : 390;

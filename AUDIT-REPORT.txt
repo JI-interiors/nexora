@@ -26,3 +26,12 @@ Validation:
 Deployment note:
 Relative image paths work both when the project is opened locally and when deployed at https://nalvo.in/.
 SEO absolute URLs in canonical/Open Graph/schema metadata intentionally remain absolute because search engines require the production domain.
+
+
+CONSOLIDATED FIX PASS (2026-10-07)
+- Preserved mobile-responsive baseline and original scattered-card design.
+- Removed hero stage forced-layout reads by caching stage width via ResizeObserver.
+- Added high-priority preload for the active RapidFlow hero image.
+- Deferred Selected Work demo iframe navigation with IntersectionObserver and 500px root margin; fallback loads all if unsupported.
+- Kept portfolio images local WebP and all previously fixed SEO/crawlability files.
+- Rechecked undefined text, legacy NEXORA branding, invalid </meta>/<link> closers, sitemap/robots presence.
