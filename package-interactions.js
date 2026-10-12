@@ -24,6 +24,8 @@
   packages.forEach((card, index) => {
     if (card.querySelector(':scope > .package-controls')) return;
     const name = getName(card);
+    // Remove legacy card CTA links so the generated, consistently styled CTA is the only package action.
+    card.querySelectorAll(':scope > a[href*="index.html#contact"]').forEach(link => link.remove());
     const details = [...card.querySelectorAll(':scope > ul, :scope > .wd-columns')];
     if (!details.length) return;
 

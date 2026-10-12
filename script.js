@@ -63,6 +63,7 @@ document.querySelectorAll('.project-card').forEach(card => {
   let locked = false;
   let wheelDelta = 0;
   let wheelReset;
+  let wheelGestureConsumed = false;
   let touchStart = null;
   let startTime = 0;
   let pointerMoved = false;
@@ -130,11 +131,13 @@ document.querySelectorAll('.project-card').forEach(card => {
       const rel = (i - active + cards.length) % cards.length;
       const q = pos[rel];
       card.style.transition = animate
-        ? 'transform .38s cubic-bezier(.22,.8,.2,1), opacity .22s ease, filter .22s ease, box-shadow .22s ease'
+        ? 'transform .34s cubic-bezier(.22,.8,.2,1), opacity .20s ease'
         : 'none';
       card.style.transform = `translate3d(${q.x}px,${q.y}px,${q.z}px) rotateZ(${q.rz}deg) scale(${q.s})`;
       card.style.opacity = q.o;
-      card.style.filter = `brightness(${q.b})`;
+      // Avoid animating CSS filters on nine overlapping cards; opacity already
+      // communicates depth and is much cheaper to composite on mobile GPUs.
+      card.style.filter = 'none';
       card.style.zIndex = q.zI;
       card.classList.toggle('is-front', rel === 0);
     });
@@ -154,17 +157,33 @@ document.querySelectorAll('.project-card').forEach(card => {
   // Mouse wheel / trackpad: one deliberate gesture changes one card.
   // Once the gesture is consumed, scrolling is released again so the page can move.
   stage.addEventListener('wheel', e => {
-    if (locked) return;
     const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
     if (!d) return;
+
+    // A trackpad/mouse-wheel gesture emits many events. Consume the entire
+    // gesture after its first card change so one swipe cannot rotate multiple
+    // cards. Release the latch only after the wheel has been idle briefly.
+    if (wheelGestureConsumed) {
+      e.preventDefault();
+      clearTimeout(wheelReset);
+      wheelReset = setTimeout(() => {
+        wheelGestureConsumed = false;
+        wheelDelta = 0;
+      }, 220);
+      return;
+    }
+    if (locked) return;
+
     wheelDelta += d;
     clearTimeout(wheelReset);
-    wheelReset = setTimeout(() => { wheelDelta = 0; }, 140);
-    // Only capture the wheel once it is clearly an intentional hero gesture.
-    if (Math.abs(wheelDelta) >= 10) {
+    wheelReset = setTimeout(() => { wheelDelta = 0; }, 160);
+    if (Math.abs(wheelDelta) >= 18) {
       e.preventDefault();
       const dir = wheelDelta > 0 ? 1 : -1;
       wheelDelta = 0;
+      wheelGestureConsumed = true;
+      clearTimeout(wheelReset);
+      wheelReset = setTimeout(() => { wheelGestureConsumed = false; wheelDelta = 0; }, 220);
       step(dir);
     }
   }, {passive:false});
@@ -292,7 +311,10 @@ document.addEventListener('keydown',function(e){
   };
   toggle.addEventListener('click',()=>setOpen(!menu.classList.contains('is-open')));
   closeButton?.addEventListener('click',()=>setOpen(false));
-  menu.querySelectorAll('[data-menu-link]').forEach(link=>link.addEventListener('click',()=>setOpen(false)));
+  menu.querySelectorAll('[data-menu-link]').forEach(link=>link.addEventListener('click',()=>{
+    try { sessionStorage.setItem('nalvoHomeScrollY', String(window.scrollY || window.pageYOffset || 0)); sessionStorage.setItem('nalvoReturnFromService','1'); } catch(e) {}
+    setOpen(false);
+  }));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('is-open')) setOpen(false)});
 })();
 
@@ -382,4 +404,16 @@ document.querySelectorAll('.js-explore').forEach(btn => btn.addEventListener('cl
     form.reset();
     setModal(false);
   });
+})();
+
+
+/* NALVO_RESTORE_HOME_SCROLL: return to the previous homepage position instead of jumping to What We Do. */
+(function(){
+  if (!document.body || !/\bindex\.html$/.test(location.pathname) || new URLSearchParams(location.search).get('return') !== 'menu') return;
+  let saved = null, marker = null;
+  try { saved = sessionStorage.getItem('nalvoHomeScrollY'); marker = sessionStorage.getItem('nalvoReturnFromService'); sessionStorage.removeItem('nalvoReturnFromService'); sessionStorage.removeItem('nalvoHomeScrollY'); } catch(e) {}
+  const y = marker === '1' ? Math.max(0, Number(saved || 0) || 0) : 0;
+  const restore = () => { window.scrollTo(0, y); history.replaceState(history.state, '', location.pathname + location.hash); };
+  requestAnimationFrame(() => requestAnimationFrame(restore));
+  window.addEventListener('load', () => setTimeout(restore, 80), { once:true });
 })();

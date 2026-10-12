@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# Portfolio demo pages are noindex,nofollow and are excluded from the XML sitemap.
-Sitemap: https://nalvo.in/sitemap.xml

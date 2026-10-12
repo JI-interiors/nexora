@@ -29,18 +29,47 @@ body{background:var(--black);color:#f7f4ee}.maintenance{max-width:1250px;margin:
 @font-face{font-family:SpaceGroteskLocal;src:url("fonts/Inter-Medium.woff2") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
 @font-face{font-family:SpaceGroteskLocal;src:url("fonts/Inter-Bold.woff2") format("woff2");font-weight:700 900;font-style:normal;font-display:swap}
 </style>
+
+<style id="nalvo-visual-audit-fixes">
+.maintenance .hero{grid-template-columns:minmax(0,1fr);min-height:0;gap:24px;padding:7vh 0 6vh}
+.maintenance .hero h1{max-width:900px;font-size:clamp(52px,8vw,112px);line-height:.92;text-wrap:balance}
+.maintenance .hero-art{display:none}
+.maintenance .benefits{gap:14px}
+.maintenance .card{border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(17,17,26,.88));border-color:rgba(255,255,255,.12)}
+.maintenance .plans{gap:16px}
+.maintenance .plan{min-height:0;padding:26px;border-radius:22px}
+.maintenance .plan.popular{padding-top:26px}
+.maintenance .plan .best{padding:12px 14px;border-left:2px solid #ff6a1a;background:rgba(255,106,26,.07);line-height:1.55}
+.maintenance .section{padding:70px 0}
+@media(max-width:800px){.maintenance .hero{padding:5vh 0}.maintenance .hero h1{font-size:clamp(44px,11vw,66px)}.maintenance .section{padding:55px 0}.maintenance .card{padding:22px}}
+</style>
+
+
+<link rel="stylesheet" href="nalvo-service-unified.css"/>
 </head>
 <body>
-<div class="grid"></div><header><a class="logo" href="index.html"><b>N</b>NALVO</a><a class="back" href="index.html#services">← Back to Nalvo</a></header>
+<div class="grid"></div><header><a class="logo" href="index.html"><b>N</b>NALVO</a><a class="back" href="index.html?return=menu">← Back to Nalvo</a></header>
 <main class="maintenance">
-<section class="hero"><div><div class="kicker">NALVO / 05 — 06</div><h1>Website<br/><em>maintenance.</em></h1><p>Keep your website fast, secure, updated and working properly—with ongoing technical care from NALVO.</p></div></section>
+<section class="hero"><div><div class="kicker">NALVO / 04 — 05</div><h1>Website<br/><em>maintenance.</em></h1><p>Keep your website fast, secure, updated and working properly—with ongoing technical care from NALVO.</p></div></section>
 <section class="section"><div class="kicker">WHY MAINTENANCE?</div><h2>A website needs<br/>care after launch.</h2><p class="intro">Launching a website is only the beginning. Updates, security issues, broken links, slow loading, form failures and outdated content can appear over time. Our maintenance plans keep your website healthy while you focus on your business.</p>
 <div class="benefits"><article class="card"><span>01</span><h3>Security</h3><p>Monitor common security risks and keep website components updated.</p></article><article class="card"><span>02</span><h3>Performance</h3><p>Monitor loading speed, responsiveness and technical performance.</p></article><article class="card"><span>03</span><h3>Backups</h3><p>Maintain reliable backups so your website can be restored when needed.</p></article><article class="card"><span>04</span><h3>Support</h3><p>Handle content updates, bugs, forms and everyday website changes.</p></article></div></section>
 <section class="section"><div class="kicker">MONTHLY PLANS</div><h2>Choose your<br/>level of care.</h2><div class="plans">
-<article class="card plan"><span>BASIC MAINTENANCE</span><div class="price">$49<small>/mo</small></div><p>Essential website care for small websites.</p><ul><li>Website health check</li><li>CMS, plugin &amp; theme updates</li><li>Basic security monitoring</li><li>Website backup</li><li>Broken-link check</li><li>Contact-form testing</li><li>Mobile check</li><li>Minor text/image updates</li><li>Monthly report</li></ul><p class="best">Best for small businesses, portfolios and simple websites.</p></article>
-<article class="card plan popular"><span>BUSINESS MAINTENANCE</span><div class="price">$99<small>/mo</small></div><p>Complete ongoing protection and monitoring.</p><ul><li>Everything in Basic</li><li>Regular backups</li><li>Advanced security monitoring</li><li>Error &amp; broken-link monitoring</li><li>Speed monitoring</li><li>Basic SEO health monitoring</li><li>Up to 2 hours minor updates/month</li><li>Content &amp; image updates</li><li>Monthly report</li></ul><p class="best">Best for local businesses, restaurants, agencies and service businesses.</p></article>
-<article class="card plan"><span>PROFESSIONAL MAINTENANCE</span><div class="price">$179<small>/mo</small></div><p>Performance, security and priority support.</p><ul><li>Everything in Business</li><li>Performance optimization</li><li>Core Web Vitals monitoring</li><li>Technical SEO monitoring</li><li>Form &amp; conversion testing</li><li>Browser/device checks</li><li>Up to 4 hours minor updates/month</li><li>Landing-page updates</li><li>Priority support</li></ul><p class="best">Best for lead-generation and growing businesses.</p></article>
-<article class="card plan"><span>PREMIUM CARE</span><div class="price">$299<small>/mo</small></div><p>Complete website management for businesses that rely on their website.</p><ul><li>Everything in Professional</li><li>Advanced security monitoring</li><li>Automated &amp; manual backups</li><li>Speed &amp; Core Web Vitals optimization</li><li>Technical SEO monitoring</li><li>Form/CTA testing</li><li>Up to 8 hours updates/month</li><li>Page &amp; landing-page modifications</li><li>Conversion recommendations</li><li>Priority support</li></ul><p class="best">Best for established and high-value websites.</p></article>
+<article class="card plan"><span>BASIC MAINTENANCE</span><div class="price">$49<small>/mo</small></div><p>Essential website care for small websites.</p><ul><li>Website health check</li><li>CMS, plugin &amp; theme updates</li><li>Basic security monitoring</li><li>Website backup</li><li>Broken-link check</li><li>Contact-form testing</li><li>Mobile check</li><li>Minor text/image updates</li><li>Monthly report</li></ul><p class="best">Best for small businesses, portfolios and simple websites.</p>
+<a class="package-cta" href="index.html#contact">Choose Basic Care <span aria-hidden="true">→</span></a>
+</article>
+
+<article class="card plan popular"><span>BUSINESS MAINTENANCE</span><div class="price">$99<small>/mo</small></div><p>Complete ongoing protection and monitoring.</p><ul><li>Everything in Basic</li><li>Regular backups</li><li>Advanced security monitoring</li><li>Error &amp; broken-link monitoring</li><li>Speed monitoring</li><li>Basic SEO health monitoring</li><li>Up to 2 hours minor updates/month</li><li>Content &amp; image updates</li><li>Monthly report</li></ul><p class="best">Best for local businesses, restaurants, agencies and service businesses.</p>
+<a class="package-cta" href="index.html#contact">Choose Business Care <span aria-hidden="true">→</span></a>
+</article>
+
+<article class="card plan"><span>PROFESSIONAL MAINTENANCE</span><div class="price">$179<small>/mo</small></div><p>Performance, security and priority support.</p><ul><li>Everything in Business</li><li>Performance optimization</li><li>Core Web Vitals monitoring</li><li>Technical SEO monitoring</li><li>Form &amp; conversion testing</li><li>Browser/device checks</li><li>Up to 4 hours minor updates/month</li><li>Landing-page updates</li><li>Priority support</li></ul><p class="best">Best for lead-generation and growing businesses.</p>
+<a class="package-cta" href="index.html#contact">Choose Professional Care <span aria-hidden="true">→</span></a>
+</article>
+
+<article class="card plan"><span>PREMIUM CARE</span><div class="price">$299<small>/mo</small></div><p>Complete website management for businesses that rely on their website.</p><ul><li>Everything in Professional</li><li>Advanced security monitoring</li><li>Automated &amp; manual backups</li><li>Speed &amp; Core Web Vitals optimization</li><li>Technical SEO monitoring</li><li>Form/CTA testing</li><li>Up to 8 hours updates/month</li><li>Page &amp; landing-page modifications</li><li>Conversion recommendations</li><li>Priority support</li></ul><p class="best">Best for established and high-value websites.</p>
+<a class="package-cta" href="index.html#contact">Choose Premium Care <span aria-hidden="true">→</span></a>
+</article>
+
 </div></section>
 <section class="section"><div class="kicker">ONE-TIME SERVICES</div><h2>Need something<br/>fixed now?</h2><div class="ones">
 <article class="card one"><h3>Website Health Check</h3><strong>$49</strong><p>Errors, links, forms, responsiveness, updates and performance.</p></article>

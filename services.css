@@ -77,3 +77,40 @@ main{padding-top:82px;}
   main{padding-top:70px}
   .hero{padding:5vh 6vw 5vh!important}
 }
+
+
+/* Accessible, high-contrast package controls across all service pages */
+.plans .plan .package-toggle,
+.plans .plan button.package-toggle {
+  color:#fff !important;
+  opacity:1 !important;
+  font-weight:700 !important;
+  text-shadow:none !important;
+  background:rgba(255,255,255,.07) !important;
+  border-color:rgba(255,255,255,.42) !important;
+}
+.plans .plan .package-toggle span { color:#fff !important; opacity:1 !important; }
+.plans .plan .package-toggle b { color:#ff8a35 !important; opacity:1 !important; }
+.plans .plan .package-toggle:hover,
+.plans .plan .package-toggle:focus-visible {
+  color:#fff !important;
+  background:rgba(255,106,26,.18) !important;
+  border-color:#ff8a35 !important;
+  outline:2px solid #ffb36b !important;
+  outline-offset:2px;
+}
+.plans .plan .package-cta,
+.plans .plan a.package-cta {
+  color:#17110c !important;
+  background:#ff9b35 !important;
+  border-color:#ff9b35 !important;
+  opacity:1 !important;
+  font-weight:800 !important;
+  text-shadow:none !important;
+}
+.plans .plan .package-cta span { color:#17110c !important; opacity:1 !important; }
+.plans .plan .package-cta:hover,
+.plans .plan .package-cta:focus-visible {
+  color:#111 !important; background:#ffb65c !important; border-color:#ffb65c !important;
+  outline:2px solid #fff !important; outline-offset:2px;
+}

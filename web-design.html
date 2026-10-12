@@ -87,12 +87,27 @@
 @font-face{font-family:SpaceGroteskLocal;src:url("fonts/Inter-Medium.woff2") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
 @font-face{font-family:SpaceGroteskLocal;src:url("fonts/Inter-Bold.woff2") format("woff2");font-weight:700 900;font-style:normal;font-display:swap}
 </style>
+
+<style id="nalvo-visual-audit-fixes">
+/* Keep the editorial hero compact and the four package cards visually aligned. */
+.hero{grid-template-columns:minmax(0,1fr);min-height:0;padding-top:7vh;padding-bottom:5vh}
+.hero h1{max-width:900px;line-height:.92;text-wrap:balance}
+.wd-card{min-width:0}
+.wd-card .package-toggle,.wd-card .package-cta{width:100%;min-height:50px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;border-radius:12px;text-align:center;line-height:1.35;padding:13px 16px}
+.wd-card .package-toggle{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.035);color:#f7f4ee}
+.wd-card .package-cta{border:1px solid #ff6a1a;background:#ff6a1a;color:#111;font-weight:800}
+.wd-best{margin-bottom:20px;min-height:0;line-height:1.55}
+@media(max-width:800px){.hero{padding-top:5vh}.wd-pro{grid-template-columns:1fr;gap:22px}.wd-card{padding:22px}}
+</style>
+
+
+<link rel="stylesheet" href="nalvo-service-unified.css"/>
 </head>
 <body>
 <div class="grid"></div>
-<header><a class="logo" href="index.html"><b>N</b>NALVO</a><a class="back" href="index.html#services">← Back to Nalvo</a></header>
+<header><a class="logo" href="index.html"><b>N</b>NALVO</a><a class="back" href="index.html?return=menu">← Back to Nalvo</a></header>
 <main>
-<section class="hero"><div><div class="kicker">NALVO / 01 — 06</div><h1>Web Design<br/><em>that works.</em></h1><p>Distinctive interfaces that make a business feel credible, premium and memorable from the first click.</p></div></section>
+<section class="hero"><div><div class="kicker">NALVO / 01 — 05</div><h1>Web Design<br/><em>that works.</em></h1><p>Distinctive interfaces that make a business feel credible, premium and memorable from the first click.</p></div></section>
 <section class="wd-packages" id="packages">
 <div class="wd-intro">
 <div><div class="kicker">WEB DESIGN / PACKAGES</div><h2>Choose the build<br/><em style="font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.62)">that fits your next move.</em></h2></div>
@@ -109,6 +124,8 @@
 <li>Up to 3 pages</li><li>Custom modern website design</li><li>Mobile, tablet &amp; desktop responsive</li><li>Professional homepage</li><li>About page + Contact page</li><li>Click-to-call phone button</li><li>Contact / enquiry form</li><li>Google Maps integration</li><li>Social media links</li><li>Basic on-page SEO</li><li>Basic speed optimization</li><li>SSL / HTTPS setup assistance</li><li>Google Analytics setup</li><li>Google Search Console setup</li><li>Conversion-focused CTA buttons</li><li>1 round of revisions</li><li>Website deployment</li>
 </ul>
 <div class="wd-delivery"><span>Delivery</span><strong>5–7 business days</strong></div>
+
+<a class="wd-package-cta" href="index.html#contact">Choose Starter <span aria-hidden="true">→</span></a>
 </article>
 <article class="wd-card wd-featured">
 <div class="wd-top"><span class="wd-number">02 / BUSINESS</span><span class="wd-badge">Most Popular</span></div>
@@ -120,6 +137,8 @@
 <li>Everything in Starter</li><li>Up to 7 pages</li><li>Premium custom design</li><li>High-converting homepage</li><li>Up to 4 dedicated service pages</li><li>Testimonials / reviews section</li><li>FAQ section</li><li>Google Maps integration</li><li>Click-to-call buttons</li><li>WhatsApp / chat integration</li><li>Contact &amp; enquiry forms</li><li>Social media integration</li><li>Basic local SEO structure</li><li>SEO-friendly page titles &amp; descriptions</li><li>Image optimization + speed optimization</li><li>Google Analytics + Search Console</li><li>Schema markup setup</li><li>Conversion-focused CTAs</li><li>2 rounds of revisions</li><li>Website deployment</li>
 </ul>
 <div class="wd-delivery"><span>Delivery</span><strong>7–10 business days</strong></div>
+
+<a class="wd-package-cta" href="index.html#contact">Choose Business <span aria-hidden="true">→</span></a>
 </article>
 <article class="wd-card">
 <div class="wd-top"><span class="wd-number">03 / GROWTH</span></div>
@@ -131,6 +150,8 @@
 <li>Everything in Business</li><li>Up to 12 pages</li><li>Premium custom UI / UX design</li><li>Up to 8 dedicated service / location pages</li><li>Conversion-focused page structure</li><li>Lead-generation strategy</li><li>Advanced contact / enquiry forms</li><li>Click-to-call throughout the website</li><li>WhatsApp / chat integration</li><li>Google Maps &amp; local business integration</li><li>Customer reviews / testimonials</li><li>FAQ sections</li><li>Local SEO structure</li><li>Keyword-focused page content structure</li><li>Advanced on-page SEO + schema markup</li><li>Image compression &amp; optimization</li><li>Advanced speed + Core Web Vitals optimization</li><li>Google Analytics 4 + Search Console</li><li>Conversion + form conversion tracking</li><li>Basic Google Business Profile guidance</li><li>3 rounds of revisions</li><li>30 days post-launch support</li>
 </ul>
 <div class="wd-delivery"><span>Delivery</span><strong>10–14 business days</strong></div>
+
+<a class="wd-package-cta" href="index.html#contact">Choose Growth <span aria-hidden="true">→</span></a>
 </article>
 <article class="wd-card wd-pro">
 <div class="wd-summary">
@@ -147,6 +168,8 @@
 <div class="wd-group"><h5>Performance</h5><ul><li>Speed optimization</li><li>Image optimization</li><li>Mobile optimization</li><li>Core Web Vitals improvements</li><li>Technical SEO checks</li></ul><h5>Tracking</h5><ul><li>Google Analytics 4</li><li>Google Search Console</li><li>Conversion tracking</li><li>Form submission tracking</li><li>Call / CTA tracking</li></ul></div>
 <div class="wd-group"><h5>Support</h5><ul><li>30 days post-launch support</li><li>4 rounds of revisions</li><li>Website training / walkthrough</li></ul><p class="wd-note">*Subject to agreed project scope.</p></div>
 </div>
+
+<a class="wd-package-cta" href="index.html#contact">Choose Growth Pro <span aria-hidden="true">→</span></a>
 </article>
 </div>
 <section class="wd-addons">
